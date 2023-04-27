@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="projethorloge.css">
+</head>
+<body>
+    <header>
+        <h1 id="Horloge">
+            12:05:15
+        </h1>
+    </header>
+    <script>
+        
+        function Horloge ()
+        {
+            let temps = new Date();
+        let heures = temps.getHours();
+        let minutes = temps.getMinutes();
+        let secondes = temps.getSeconds();
+        if(heures < 10)
+            heures = "0" + heures;
+        if(minutes < 10)
+            minutes = "0" + minutes
+        if(secondes < 10) 
+            secondes = "0" + secondes
+
+            
+        let heureActuelle = heures + ":" + minutes + ":" + secondes;
+
+        document.getElementById("Horloge").textContent = heureActuelle;
+        setInterval("Horloge(), 1000");
+        }
+
+        document.body.onload = Horloge;
+
+    </script>
+</body>
+</html>

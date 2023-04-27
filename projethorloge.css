@@ -1,0 +1,18 @@
+body{
+    color: red;
+    background-color: black;
+}
+header
+{
+    height: 720px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+header h1
+{
+font-family: Arial, Helvetica, sans-serif;
+font-size: 3cm;
+}
